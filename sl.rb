@@ -31,10 +31,14 @@ def mokuroku_info(entry, stack)
       resp.code == '200' ? '○' : '☓',
       path.sub('/xyz/', '').sub('/mokuroku.csv.gz', '')
     ]
-    s << [
-      Time.parse(resp['last-modified']).localtime.to_s.sub(' +0900', ''),
-      $av.number_to_human_size(resp['content-length'])
-    ] if resp.code == '200'
+    if resp.code == '200'
+      s << [
+        Time.parse(resp['last-modified']).localtime.to_s.sub(' +0900', ''),
+        $av.number_to_human_size(resp['content-length'])
+      ]
+    else
+      s << ['-', '-']
+    end
     s << stack.join('/')
     print s.join(','), "\n"
   }
