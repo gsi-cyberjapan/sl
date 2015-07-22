@@ -44,6 +44,12 @@ def mokuroku_info(entry, stack)
   }
 end
 
+def min_zoom(entry, stack)
+  return unless entry['url'].include?('{z}/{x}/{y}')
+  mz = entry['minZoom']
+  print [mz, mz.nil? ? '-' : 2 ** mz, entry['url']].join(' '), "\n"
+end
+
 def process(entry, stack)
   case entry['type']
   when 'LayerGroup'
