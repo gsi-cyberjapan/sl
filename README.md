@@ -29,3 +29,17 @@ http://cyberjapandata.gsi.go.jp/xyz/pale/mokuroku.csv.gz
 ...
 http://cyberjapandata.gsi.go.jp/xyz/experimental_anno/mokuroku.csv.gz
 ```
+
+## タイルレイヤの minZoom の確認
+```
+$ ruby sl.rb --min_zoom
+http://cyberjapandata.gsi.go.jp/xyz/std/{z}/{x}/{y}.png
+http://cyberjapandata.gsi.go.jp/xyz/pale/{z}/{x}/{y}.png
+http://cyberjapandata.gsi.go.jp/xyz/blank/{z}/{x}/{y}.png
+http://cyberjapandata.gsi.go.jp/xyz/english/{z}/{x}/{y}.png
+http://cyberjapandata.gsi.go.jp/xyz/ort/{z}/{x}/{y}.jpg
+2 http://cyberjapandata.gsi.go.jp/xyz/ort/{z}/{x}/{y}.jpg
+10 http://cyberjapandata.gsi.go.jp/xyz/gazo4/{z}/{x}/{y}.jpg
+...
+15 http://cyberjapandata.gsi.go.jp/xyz/experimental_anno/{z}/{x}/{y}.geojson
+```

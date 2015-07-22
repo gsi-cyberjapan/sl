@@ -47,7 +47,7 @@ end
 def min_zoom(entry, stack)
   return unless entry['url'].include?('{z}/{x}/{y}')
   mz = entry['minZoom']
-  print [mz, mz.nil? ? '-' : 2 ** mz, entry['url']].join(' '), "\n"
+  print [mz, entry['url']].join(' '), "\n"
 end
 
 def process(entry, stack)
