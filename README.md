@@ -30,6 +30,15 @@ http://cyberjapandata.gsi.go.jp/xyz/pale/mokuroku.csv.gz
 http://cyberjapandata.gsi.go.jp/xyz/experimental_anno/mokuroku.csv.gz
 ```
 
+## 地理院タイル目録のパスの一覧
+```
+$ ruby sl.rb --mokuroku-paths
+/xyz/std/mokuroku.csv.gz
+/xyz/pale/mokuroku.csv.gz
+...
+/xyz/experimental_dem10b/mokuroku.csv.gz
+```
+
 ## タイルレイヤの minZoom の確認
 ```
 $ ruby sl.rb --min_zoom

@@ -1,3 +1,4 @@
+# coding: utf-8
 require 'open-uri'
 require 'json'
 require 'time'
@@ -16,6 +17,12 @@ def mokuroku_urls(entry, stack)
   r = entry['url'].split('/{z}/{x}/{y}')
   return if r.size == 1
   print "#{r[0]}/mokuroku.csv.gz\n"
+end
+
+def mokuroku_paths(entry, stack)
+  r = entry['url'].split('/{z}/{x}/{y}')
+  return if r.size == 1
+  print "#{r[0].sub('http://cyberjapandata.gsi.go.jp', '')}/mokuroku.csv.gz\n"
 end
 
 def mokuroku_info(entry, stack)
